@@ -1,3 +1,4 @@
+// main.go
 package main
 
 import (
@@ -55,7 +56,7 @@ func main() {
 	done := make(chan bool)
 	go func() {
 		defer close(done)
-		err := scraper.ScrapeNews(maxPost, maxPaging, client)
+		err := scraper.ScrapeNews(*maxPost, *maxPaging, client)
 		if err != nil {
 			log.Fatalf("Gagal melakukan scraping: %v", err)
 		}
