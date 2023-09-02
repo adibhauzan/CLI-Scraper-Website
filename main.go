@@ -1,4 +1,3 @@
-// main.go
 package main
 
 import (
@@ -40,7 +39,6 @@ func main() {
 		log.Fatalf("Gagal menghubungkan ke MongoDB: %v", err)
 	}
 
-	// Menutup koneksi ke MongoDB saat aplikasi selesai
 	defer func() {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second) // Timeout opsional
 		defer cancel()
