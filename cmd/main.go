@@ -8,14 +8,12 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	// "time"
 
 	"github.com/adibhauzan/CLI-Scraper-Website/internal/scraper"
 	"github.com/qiniu/qmgo"
 )
 
 func main() {
-	// Menggunakan konfigurasi eksternal
 	var (
 		maxPost   = flag.Int("max-post", 10, "Jumlah maksimum berita yang akan diambil")
 		maxPaging = flag.Int("max-paging", 5, "Jumlah maksimum halaman yang akan di-scrape")
